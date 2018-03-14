@@ -49,13 +49,13 @@
                             </ol>
                             <div class="carousel-inner">
                                 <div class="item active">
-                                    <img class="slide-image" src="resources/img/piano.jpg" alt="">
+                                    <img class="slide-image" src="resources/img/39.jpg" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="resources/img/tablechair.jpg" alt="">
+                                    <img class="slide-image" src="resources/img/1.jpg" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="resources/img/whiteboard.jpg" alt="">
+                                    <img class="slide-image" src="resources/img/2.jpg" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
