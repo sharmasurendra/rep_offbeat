@@ -27,11 +27,11 @@
 			<p>&nbsp;</p>
 				<h3>Delivering the news customers need</h3>
 				<p>&nbsp;</p>
-				<h4> March 2017</h4>
+				<h4> March 2018</h4>
 				<h5> <a class="text-warning" href="">Lesotho Mine Yields Sixth 100-Carat-Plus Diamond of 2018</a> </h5>
 				
 				<p>&nbsp;</p>
-				<h4> Janaury 2017</h4>
+				<h4> Feb 2018</h4>
 				<h5> <a class="text-warning" href="">Signet to Close 200+ Stores This Fiscal Year</a> </h5>
 				
 			</div>       
