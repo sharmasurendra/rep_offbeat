@@ -29,18 +29,19 @@
   <section class="header" id="about">
          <div class="container">
              <br>
-                <h1 class="animated fadeInDown">Progress With Us !! </h1>
+                <h1 class="animated fadeInDown">About Us</h1>
                 <ul class="we-create animated fadeInUp">
                  <h3>
 
 Our natural semi-precious gemstone jewelry features a rainbow of colors including birthstones and unique multi-colored combinations. 
 Hand-selected colored gemstones of the finest quality are set in timeless rings, earrings, necklaces, and bracelets.
-
+		</h3>
+		<h4>	
 we derive design inspirations for each collection around the beauty & uniqueness of the natural stones. Sharing love for natural stones-
 the raw attraction and fierce power, we make the stones the spotlight of each piece, and build the designs around the stones. 
-
+		</h4>
 Additionally, designs are influenced by cultural roots in India. We effortlessly incorporate the Indian influence as well as trends from across the globe.
-		</h3>
+		
                 </ul>
             </div>
         </section> 
