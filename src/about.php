@@ -21,8 +21,8 @@
 
 <body>
 
-<?php include 'common/header.php';?>
-   
+<!-- <?php include 'common/header.php';?>
+ -->   
 	
     <!-- Page Content -->
     
@@ -44,7 +44,7 @@
     <!-- /.container -->
 
     <!-- /.container -->
-<?php include 'common/footer.php';?>
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 

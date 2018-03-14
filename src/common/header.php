@@ -27,13 +27,7 @@
                     <li>
                         <a href="../src/contact.php">Contact</a>
                     </li>
-				
-			
-			
-			
-			  
-                </ul>
-				
+	             </ul>
 	
             </div>
 			

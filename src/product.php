@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-	<base href="http://localhost/buytradesell/">
+	<base href="#">
     <title>Buy-Sell-Trade Product Details</title>
 
 <!-- Latest compiled and minified CSS -->
@@ -88,7 +88,7 @@
 
     <!-- /.container -->
 		
-			<?php include 'common/footer.php';?>
+			
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 
