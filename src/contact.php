@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Buy-Trade-Sell Contacts</title>
+    <title>Offbeat</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -29,7 +29,7 @@
 		
 			<div class="container">
 			<p>&nbsp;</p>
-				<h3>Buy-Trade-Sell Developer Contact Information</h3>	
+				<h3>Contact US - </h3>	
 				<?php
 				$sourceFile = file_get_contents('../resources/text/contacts.txt');
 				$fileContents = explode("\n", $sourceFile);	
