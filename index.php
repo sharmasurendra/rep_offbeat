@@ -55,7 +55,7 @@
                                     <img class="slide-image" src="resources/img/40.jpg" alt="">
                                 </div>
                                 <div class="item">
-                                    <img class="slide-image" src="resources/img/42.jpg" alt="">
+                                    <img class="slide-image" src="resources/img/42.png" alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
