@@ -31,18 +31,8 @@
              <br>
                 <h1 class="animated fadeInDown">Progress With Us !! </h1>
                 <ul class="we-create animated fadeInUp">
-                 <h3>We provide clients with exclusive and tailored recommendations that leads to increased profits and  growth.</h3>
-                </ul>
-            </div>
-        </section> 
-	
-        <div class="row" style="padding-top: 59px;">
-		
-		<div class="container">
-		<p>&nbsp;</p>
-		<h3>Buy-Trade-Sell</h3>
-		<p>&nbsp;</p>
-		<pre><h4>
+                 <h3>
+
 Our natural semi-precious gemstone jewelry features a rainbow of colors including birthstones and unique multi-colored combinations. 
 Hand-selected colored gemstones of the finest quality are set in timeless rings, earrings, necklaces, and bracelets.
 
@@ -50,10 +40,12 @@ we derive design inspirations for each collection around the beauty & uniqueness
 the raw attraction and fierce power, we make the stones the spotlight of each piece, and build the designs around the stones. 
 
 Additionally, designs are influenced by cultural roots in India. We effortlessly incorporate the Indian influence as well as trends from across the globe.
-		</h4></pre>
-        </div>
+		</h3>
+                </ul>
+            </div>
+        </section> 
+	
 
-    </div>
     <!-- /.container -->
 
     <!-- /.container -->
