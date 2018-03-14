@@ -34,9 +34,9 @@
 		<h3>Buy-Trade-Sell</h3>
 		<p>&nbsp;</p>
 		<pre><h4>
-		A platform for buying, selling or trading used items online.
-		Buy & sell secondhand products quickly, safely and locally on the Buy-Trade-Sell.
-		Start selling your used stuff today!
+		Our natural semi-precious gemstone jewelry features a rainbow of colors including birthstones and unique multi-colored combinations. Hand-selected colored gemstones of the finest quality are set in timeless rings, earrings, necklaces, and bracelets.
+
+we derive design inspirations for each collection around the beauty & uniqueness of the natural stones. Sharing love for natural stones- the raw attraction and fierce power, we make the stones the spotlight of each piece, and build the designs around the stones. Additionally, their designs are influenced by their cultural roots, as born and raised in India. They effortlessly incorporate the Indian influence as well as trends from across the globe.
 		</h4></pre>
         </div>
 
