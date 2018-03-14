@@ -25,7 +25,7 @@
 		
 			<div class="container">
 			<p>&nbsp;</p>
-				<h3>Survey: Silver Sales Up for 59% of Retailers</h3>
+				<h3>Delivering the news customers need</h3>
 				<p>&nbsp;</p>
 				<h4> March 2017</h4>
 				<h5> <a class="text-warning" href="">Lesotho Mine Yields Sixth 100-Carat-Plus Diamond of 2018</a> </h5>
