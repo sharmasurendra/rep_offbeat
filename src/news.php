@@ -25,26 +25,15 @@
 		
 			<div class="container">
 			<p>&nbsp;</p>
-				<h3>Buy-Trade-Sell in the News</h3>
+				<h3>Survey: Silver Sales Up for 59% of Retailers</h3>
 				<p>&nbsp;</p>
 				<h4> March 2017</h4>
-				<h5> <a class="text-warning" href="">Buy-Trade-Sell is going online. </a> </h5>
+				<h5> <a class="text-warning" href="">Lesotho Mine Yields Sixth 100-Carat-Plus Diamond of 2018</a> </h5>
 				
 				<p>&nbsp;</p>
 				<h4> Janaury 2017</h4>
-				<h5> <a class="text-warning" href="">Buy-Trade-Sell clocks $100k revenue. </a> </h5>
+				<h5> <a class="text-warning" href="">Signet to Close 200+ Stores This Fiscal Year</a> </h5>
 				
-				<p>&nbsp;</p>
-				<h4> December 2017</h4>
-				<h5> <a class="text-warning" href="">Buy-Trade-Sell secures series A funding. </a> </h5>
-				
-				<p>&nbsp;</p>
-				<h4> October 2016</h4>
-				<h5> <a class="text-warning" href="">Buy-Trade-Sell reaches 100k users. </a> </h5>
-				
-				<p>&nbsp;</p>
-				<h4> August 2016</h4>
-				<h5> <a class="text-warning" href="">Buy-Trade-Sell secures seed funding. </a> </h5>
 			</div>       
 
 		</div>
