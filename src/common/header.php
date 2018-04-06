@@ -27,6 +27,9 @@
                     <li>
                         <a href="../src/contact.php">Contact</a>
                     </li>
+		    <li>
+                        <a href="../src/admin.html">Login</a>
+                    </li>
 	             </ul>
 	
             </div>
