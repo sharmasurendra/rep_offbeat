@@ -30,6 +30,12 @@
 		    <li>
                         <a href="../src/admin.html">Login</a>
                     </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User Section</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="./src/user.html">Create & Search User</a>
+                    </div>
+                </li>
 	             </ul>
 	
             </div>
