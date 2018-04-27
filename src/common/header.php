@@ -18,7 +18,9 @@
                         <a href="../src/about.php">About</a>
                     </li>
                     <li>
-                        <a href="../src/product.php">Product</a>
+                        <!-- <a href="../src/product.php">Product</a> -->
+                        <a href="../src/products.html" class="pure-menu-link">Products</a>
+
                     </li>
 					<li>
                         <a href="../src/news.php">News</a>

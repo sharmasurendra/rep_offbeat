@@ -17,13 +17,18 @@
 </head>
 
 <body>
-
 		<?php 
 			$id = $_GET['id'];
-			$servername = "localhost";
-			$username = "cmpe272user";
-			$password = "cmpe272user";
-			$dbname = "cmpe272";
+
+			$servername = "us-cdbr-iron-east-05.cleardb.net";
+			$username = "b1069ce4ee0339";
+			$password = "7ee6e563";
+			$dbname = "heroku_5eaa584d7cda171";
+
+			// $servername = "localhost";
+			// $username = "cmpe272user";
+			// $password = "cmpe272user";
+			// $dbname = "cmpe272";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
