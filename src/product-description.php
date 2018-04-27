@@ -1,5 +1,6 @@
 <?php
 extract($_POST);
+echo "AAAAAAAAA";
  $servername = "us-cdbr-iron-east-05.cleardb.net";
  $username = "b1069ce4ee0339";
  $password = "7ee6e563";
@@ -7,14 +8,6 @@ extract($_POST);
 
 $id = $_POST['action'];
 
-// $site_url = "https://merkato.herokuapp.com/sellers/1/products/$id/track";
-
-// $ch = curl_init($site_url);
-// curl_setopt_array($ch, $options);
-
-// $content  = curl_exec($ch);
-// //die($content);
-// curl_close($ch);
 
 
 try {
