@@ -7,7 +7,7 @@ extract($_POST);
 
 $id = $_POST['action'];
 
-$site_url = "https://merkato.herokuapp.com/sellers/1/products/$id/track";
+// $site_url = "https://merkato.herokuapp.com/sellers/1/products/$id/track";
 
 $options = array(
     CURLOPT_RETURNTRANSFER => true,
@@ -22,12 +22,12 @@ $options = array(
     CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
     CURLOPT_TIMEOUT        => 120,    // time-out on response
 );
-$ch = curl_init($site_url);
-curl_setopt_array($ch, $options);
+// $ch = curl_init($site_url);
+// curl_setopt_array($ch, $options);
 
-$content  = curl_exec($ch);
-//die($content);
-curl_close($ch);
+// $content  = curl_exec($ch);
+// //die($content);
+// curl_close($ch);
 
 
 try {
