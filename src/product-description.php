@@ -23,10 +23,23 @@
     $result = $stmt->fetch();
     $value = $result['product_name'];
     echo "222";
-
-
 }
 
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
+$conn = null;
+
+?>
+
+<html lang="en">
+</head>
+<body>
+
+<!-- <link rel="stylesheet" href="desc.css">
+ -->    <h1>Details</h1> <h2><?php print($result['product_name']); ?></h2>
+    <h2><?php print($result['product_desc']); ?></h2>
+     <br><br><img src= <?php echo($result['product_image']); ?>>
+
+</body>
+</html>
