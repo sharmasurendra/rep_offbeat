@@ -9,19 +9,6 @@ $id = $_POST['action'];
 
 // $site_url = "https://merkato.herokuapp.com/sellers/1/products/$id/track";
 
-$options = array(
-    CURLOPT_RETURNTRANSFER => true,
-    // return web page
-    CURLOPT_HEADER         => false,// don't return headers
-    CURLOPT_POST           => 1,
-    CURLOPT_FOLLOWLOCATION => true,   // follow redirects
-    CURLOPT_MAXREDIRS      => 10,     // stop after 10 redirects
-    CURLOPT_ENCODING       => "",     // handle compressed
-    CURLOPT_USERAGENT      => "test", // name of client
-    CURLOPT_AUTOREFERER    => true,   // set referrer on redirect
-    CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
-    CURLOPT_TIMEOUT        => 120,    // time-out on response
-);
 // $ch = curl_init($site_url);
 // curl_setopt_array($ch, $options);
 
@@ -31,6 +18,7 @@ $options = array(
 
 
 try {
+    echo "111";
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -39,14 +27,11 @@ try {
     and product_id= :value" );
 
     $stmt->bindParam(':value', $_POST['action']);
-
-
-       $stmt->execute();
- $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
+    $stmt->execute();
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $result = $stmt->fetch();
-
-$value = $result['product_name'];
+    $value = $result['product_name'];
+    echo "222";
 
 if(isset($_COOKIE['cookie']))
 {
@@ -57,7 +42,7 @@ if(isset($_COOKIE['cookie']))
 
   else
  $count = 1;
-
+echo "3333";
 
 }
 else
@@ -65,7 +50,7 @@ else
     $last = $result['product_name'];
     $count = 1;
 }
-
+echo "4444";
 
     //print_r($_SERVER);
 $d = $_SERVER['HTTP_HOST'];
@@ -75,10 +60,7 @@ setcookie("cookie[$value]","$count",time()+3600, "/",$d/*"localhost"*/, 0);
     //setcookie("last_visited","$last",time()+3600, "/","$_SERVER['HTTP_HOST']", 0);
 
      //setcookie("cookie[$value]","$count",time()+3600, "/","$_SERVER['HTTP_HOST']", 0);
-
-
-
-
+echo "5555";
 }
 
 catch(PDOException $e) {
@@ -92,17 +74,10 @@ $conn = null;
 </head>
 <body>
 
-
 <link rel="stylesheet" href="desc.css">
-
-
-
     <h1>Details</h1> <h2><?php print($result['product_name']); ?></h2>
     <h2><?php print($result['product_desc']); ?></h2>
-
      <br><br><img src= <?php echo($result['product_image']); ?>>
-
-
 
 </body>
 </html>
