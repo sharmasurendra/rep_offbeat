@@ -9,20 +9,13 @@ $password = "7ee6e563";
 $dbname = "heroku_5eaa584d7cda171";
 
 
-
-// $myHost = "us-cdbr-iron-east-05.cleardb.net"; 
-// $myUserName = "b1069ce4ee0339";  
-// $myPassword = "7ee6e563";   
-// $myDataBaseName = "heroku_5eaa584d7cda171"; 
-
-
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
     // prepare sql and bind parameters
-    $stmt = $conn->prepare("SELECT * FROM user ");
+    $stmt = $conn->prepare("SELECT first_name,last_name FROM user ");
 
 
     $stmt->execute();
@@ -32,7 +25,7 @@ $dbname = "heroku_5eaa584d7cda171";
     //$result = $stmt->fetchAll();
     //Print_r($result);
 echo "<table style='border: solid 1px black;'>";
-echo "<tr><th>Firstname</th><th>Lastname</th><th>Home Address</th><th>Email</th><th>Home Phone</th><th>Mobile Phone</th></tr>";
+echo "<tr><th>Firstname</th><th>Lastname</th></tr>";
 
 class TableRows extends RecursiveIteratorIterator {
     function __construct($it) {
@@ -56,7 +49,7 @@ class TableRows extends RecursiveIteratorIterator {
 
   $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
-echo("<h1>Airwind.me-Users</h1>");
+echo("<h1>Our Users</h1>");
    foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
         echo $v;
 
@@ -73,7 +66,7 @@ catch(PDOException $e) {
 $conn = null;
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://fabposters.slashbin.in/users/list");
+curl_setopt($ch, CURLOPT_URL, "https://progresswithus.herokuapp.com/includes/users.php");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $result = curl_exec ($ch);
 curl_close ($ch);
@@ -83,9 +76,9 @@ $obj =json_decode($result);
 
 
 
-echo("<h1>fabposters.slashbin.in-Users</h1>");
+echo("<h1>progresswithus Users</h1>");
 echo "<table style='border: solid 1px black;'>";
-echo "<tr><th>Firstname</th><th>Lastname</th><th>Home Address</th><th>Email</th><th>Home Phone</th><th>Mobile Phone</th></tr>";
+echo "<tr><th>Firstname</th><th>Lastname</tr>";
 
 
 //$obj->setFetchMode(PDO::FETCH_ASSOC);
