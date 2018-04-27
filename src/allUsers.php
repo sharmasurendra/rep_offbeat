@@ -1,8 +1,4 @@
 <?php
-// $myHost = "127.0.0.1"; // use your real host name
-// $myUserName = "admin";   // use your real login user name
-// $myPassword = "admin";   // use your real login password
-// $myDataBaseName = "labProject"; // use your real database name
 $myHost = "us-cdbr-iron-east-05.cleardb.net"; 
 $myUserName = "b1069ce4ee0339";  
 $myPassword = "7ee6e563";   
