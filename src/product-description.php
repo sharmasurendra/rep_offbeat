@@ -27,26 +27,7 @@
     // $value = $result['product_name'];
     // echo "222";
 
-if(isset($_COOKIE['cookie']))
-{
-    echo "3333";
-    $last = $result['product_name']  .",". $_COOKIE["last_visited"];
-    if(isset(($_COOKIE['cookie'])["$value"]))
-        $count = ($_COOKIE['cookie'])["$value"] + 1;
-    else
-        $count = 1;
-}
-else
-{
-    $last = $result['product_name'];
-    $count = 1;
-}
-echo "4444";
-$d = $_SERVER['HTTP_HOST'];
-setcookie("last_visited","$last",time()+3600, "/",$d/*"localhost"*/, 0);
-setcookie("cookie[$value]","$count",time()+3600, "/",$d/*"localhost"*/, 0);
 
-echo "5555";
 }
 
 catch(PDOException $e) {
