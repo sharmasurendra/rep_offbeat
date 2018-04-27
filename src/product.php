@@ -71,7 +71,6 @@
 			}
 		
 		?>
-		<?php include 'common/header.php';?>
 	
 
         <div class="row" style="padding-top: 40px;">
@@ -79,11 +78,9 @@
 		<?php 
 		
 		if($prod) {
-			include 'product_details.php';
 		}
 		else {
 			echo "<div class='container'>";
-			 include 'common/menu.php';
 			echo "<div class='col-xs-8 alert alert-danger'>No Product Found</div></div>";
 		}
 		?>
