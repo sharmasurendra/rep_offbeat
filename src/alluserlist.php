@@ -1,12 +1,19 @@
 <?php
 try {
 
-$servername = "localhost";
-$username = "aravinda";
-$password = "Welcome01@";
+$servername = "us-cdbr-iron-east-05.cleardb.net";
+$username = "b1069ce4ee0339";
+$password = "7ee6e563";
 //$username = "root";
 //$password = "";
-$dbname = "aravinda";
+$dbname = "heroku_5eaa584d7cda171";
+
+
+
+// $myHost = "us-cdbr-iron-east-05.cleardb.net"; 
+// $myUserName = "b1069ce4ee0339";  
+// $myPassword = "7ee6e563";   
+// $myDataBaseName = "heroku_5eaa584d7cda171"; 
 
 
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

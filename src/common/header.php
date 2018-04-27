@@ -27,8 +27,11 @@
                     <li>
                         <a href="../src/contact.php">Contact</a>
                     </li>
-		    <li>
+		            <li>
                         <a href="../src/admin.html">Login</a>
+                    </li>
+                     <li>
+                        <a href="../src/allUsers.php">WebSite Users</a>
                     </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User Section</a>
