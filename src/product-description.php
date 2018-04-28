@@ -19,23 +19,7 @@
     $result = $stmt->fetch();
     $value = $result['product_name'];
 
-    if(isset($_COOKIE['cookie']))
-    {
-        echo "111";
-        $last = $result['product_name']  .",". $_COOKIE["last_visited"];
-        echo "$last";
-        
-    if(isset(($_COOKIE['cookie'])["$value"]))
-           $count = ($_COOKIE['cookie'])["$value"] + 1;
-        else
-          $count = 1;
-    }
-    else
-    {
-        $last = $result['product_name'];
-        $count = 1;
-    }
-
+   
     }
     catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
