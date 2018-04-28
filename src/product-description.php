@@ -22,7 +22,7 @@
     if(isset($_COOKIE['cookie']))
     {
         $last = $result['product_name']  .",". $_COOKIE["last_visited"];
-        if(isset(($_COOKIE['cookie'])["$value"]))
+        if(isset(($_COOKIE['cookie']) ))
            $count = ($_COOKIE['cookie'])["$value"] + 1;
         else
           $count = 1;
