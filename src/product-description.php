@@ -19,7 +19,31 @@
     $result = $stmt->fetch();
     $value = $result['product_name'];
 
-   
+if(isset($_COOKIE['cookie']))
+{
+    $last = $result['product_name']  .",". $_COOKIE["last_visited"];
+    echo "$last";
+
+    if(isset(($_COOKIE['cookie'])["$value"])){
+        $count = ($_COOKIE['cookie'])["$value"] + 1;
+        echo "$count";
+    }    else{
+        $count = 1;       
+    }
+}
+else
+{
+    $last = $result['product_name'];
+    echo "222 $last";
+    $count = 1;
+}
+
+$d = $_SERVER['HTTP_HOST'];
+echo "$d";
+setcookie("last_visited","$last",time()+3600, "/",$d, 0);
+setcookie("cookie[$value]","$count",time()+3600, "/",$d, 0);
+
+
     }
     catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
