@@ -19,29 +19,22 @@
     $result = $stmt->fetch();
     $value = $result['product_name'];
 
-if(isset($_COOKIE['cookie']))
-{
-    $last = $result['product_name']  .",". $_COOKIE["last_visited"];
-    echo "$last";
+    $id = $result['product_id'];
+    $cookieVisitedCount = "visitedcountproduct"."$id";
+    $cookieProduct = "product"."$id";
 
-    if(isset(($_COOKIE['cookie'])["$value"])){
-        $count = ($_COOKIE['cookie'])["$value"] + 1;
-        echo "$count";
-    }    else{
-        $count = 1;       
-    }
+
+if(!isset($_COOKIE['$cookieVisitedCount'])){
+    $cookie = 1;
+    setcookie("$cookieVisitedCount",$cookie);
 }
-else
-{
-    $last = $result['product_name'];
-    echo "222 $last";
-    $count = 1;
+else{
+    $cookie = $_COOKIE['$cookieVisitedCount'] + 1;
+    setcookie("$cookieVisitedCount",$cookie);
 }
 
-// $d = $_SERVER['HTTP_HOST'];
-// echo "$d";
-setcookie("last_visited","$last",time()+3600);
-setcookie("cookie[$value]","$count",time()+3600);
+//setcookie("count","",time() - 3600);
+setcookie("$cookieProduct",time());
 
 
     }
