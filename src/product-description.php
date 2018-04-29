@@ -40,8 +40,8 @@ else
 
 // $d = $_SERVER['HTTP_HOST'];
 // echo "$d";
-// setcookie("last_visited","$last",time()+3600);
-// setcookie("cookie[$value]","$count",time()+3600);
+setcookie("last_visited","$last",time()+3600);
+setcookie("cookie[$value]","$count",time()+3600);
 
 
     }
