@@ -38,10 +38,10 @@ else
     $count = 1;
 }
 
-$d = $_SERVER['HTTP_HOST'];
-echo "$d";
-setcookie("last_visited","$last",time()+3600, "/",$d, 0);
-setcookie("cookie[$value]","$count",time()+3600, "/",$d, 0);
+// $d = $_SERVER['HTTP_HOST'];
+// echo "$d";
+setcookie("last_visited","$last",time()+3600);
+setcookie("cookie[$value]","$count",time()+3600);
 
 
     }
