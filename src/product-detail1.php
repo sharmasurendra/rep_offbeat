@@ -9,46 +9,40 @@
 
 
 
-// $name = $_POST['name'];
-// $password = $_POST['password'];
-// $userVerified = 0;
 
-// $postData = array(
-//     'action' => 'visitedProduct',
-//     'username' => $name,
-//     'password' => $password
-// );
+$postData = array(
+    'action' => 'visitedProduct',
+    'slugName' => $pSlugName,
+    'username' => 'guest'
+);
 
-// // Setup cURL
-// $ch = curl_init('https://cmpe272.tanmay.one/api/v1/');
-// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+// Setup cURL
+$ch = curl_init('https://cmpe272.tanmay.one/api/v1/');
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 
 
-// curl_setopt_array($ch, array(
-//     CURLOPT_POST => TRUE,
-//     CURLOPT_RETURNTRANSFER => TRUE,
-//     CURLOPT_HTTPHEADER => array(
-//         'auth-key: '.'34c7c85e562d40fe581ebab3e9c0823e345b55eef8a7ec02c618f99b4f972d8d',
-//         'Content-Type: application/json'
-//     ),
-//     CURLOPT_POSTFIELDS => json_encode($postData)
-// ));
+curl_setopt_array($ch, array(
+    CURLOPT_POST => TRUE,
+    CURLOPT_RETURNTRANSFER => TRUE,
+    CURLOPT_HTTPHEADER => array(
+        'auth-key: '.'434869e30ac42eb99ebdf5fe13e03a957057bc431302b5ba0b479abcb82e9eba',
+        'Content-Type: application/json'
+    ),
+    CURLOPT_POSTFIELDS => json_encode($postData)
+));
 
-// // Send the request
-// $response = curl_exec($ch);
+// Send the request
+$response = curl_exec($ch);
 
-// // Check for errors
-// if($response === FALSE){
-//   echo $response;
-//     die(curl_error($ch));
-// }
-// echo  $response;
-// // Decode the response
-// $responseData = json_decode($response, TRUE);
-// $isSucess = $responseData['success'];
-
-
+// Check for errors
+if($response === FALSE){
+  echo $response;
+    die(curl_error($ch));
+}
+echo  $response;
+// Decode the response
+$responseData = json_decode($response, TRUE);
 
 
 ?>
