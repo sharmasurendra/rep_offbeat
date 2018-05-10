@@ -1,101 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+<section class="main-section-services" id="services">
+<link rel="stylesheet" href="../resources/css/mp/animate.css">
+<link rel="stylesheet" href="../resources/css/mp/application-minimal.css">
+<link rel="stylesheet" href="../resources/css/mp/application-minimal3.css">
+<link rel="stylesheet" href="../resources/css/mp/bootstrap-social.css">
+<link rel="stylesheet" href="../resources/css/mp/bootstrap.css">
+<link rel="stylesheet" href="../resources/css/mp/flex.css">
+<link rel="stylesheet" href="../resources/css/mp/font-awesome.css">
+<link rel="stylesheet" href="../resources/css/mp/font-awesome.min.css">
+<link rel="stylesheet" href="../resources/css/mp/productgrid.css">
+<link rel="stylesheet" href="../resources/css/mp/responsive.css">
+<link rel="stylesheet" href="../resources/css/mp/style.css">
+<link rel="stylesheet" href="../resources/css/mp/toolkit-minimal.css">
+<link rel="stylesheet" href="../resources/css/mp/toolkit-minimal3.css">
 
-<head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-	<base href="#">
-    <title>Our Products</title>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-</head>
+<?php
+// The data to send to the API
+$postData = array(
+    'action' => 'getProducts',
+);
 
-<body>
-		<?php 
-			$id = $_GET['id'];
+// Setup cURL
+$ch = curl_init('https://cmpe272.tanmay.one/api/v1/');
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 
-			$servername = "us-cdbr-iron-east-05.cleardb.net";
-			$username = "b1069ce4ee0339";
-			$password = "7ee6e563";
-			$dbname = "heroku_5eaa584d7cda171";
 
-			// $servername = "localhost";
-			// $username = "cmpe272user";
-			// $password = "cmpe272user";
-			// $dbname = "cmpe272";
+curl_setopt_array($ch, array(
+    CURLOPT_POST => TRUE,
+    CURLOPT_RETURNTRANSFER => TRUE,
+    CURLOPT_HTTPHEADER => array(
+        'auth-key: '.'434869e30ac42eb99ebdf5fe13e03a957057bc431302b5ba0b479abcb82e9eba',
+        'Content-Type: application/json'
+    ),
+    CURLOPT_POSTFIELDS => json_encode($postData)
+));
 
-			// Create connection
-			$conn = new mysqli($servername, $username, $password, $dbname);
-			// Check connection
-			if ($conn->connect_error) {
-				//$_SESSION['error'] = "Connection error: ".$conn->connect_error;
-			}
-			else {
-				$sql = "select * from Products where id=$id";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()) {
-					$name = $row['name'];
-					$description = $row['description'];
-					$price = $row['price'];
-					$interest = $row['ppl_interest'];
-					$rating = $row['rating'];
-					$image = $row['image'];
-					$prod = true;
-					$id = $row['id'];
-					if(isset($_COOKIE['items'])) {
-						$curVal = $_COOKIE['items'];
-						echo $curVal;
-						$data = $curVal.",".$id;
-						setcookie('items', $data);
-					}
-					else {
-						setcookie('items', $id);
-						
-					}
-					
-				}
-				}
-				else {
-					$prod = false;
-					
-				}
+// Send the request
+$response = curl_exec($ch);
+
+// Check for errors
+if($response === FALSE){
+  echo $response;
+    die(curl_error($ch));
+}
+
+// Decode the response
+// echo  $response;
+
+echo "<div class=\"block block-bordered-lg\">
+    <div class=\"container\" id=\"products\">
+        <h4>Our Products </h4>
+        <div class=\"row\">
+";
+
+$responseData = json_decode($response, TRUE);
+
+  foreach ($responseData as $key => $value) {
+    $pId = $value["id"];
+  	$pName = $value["name"];
+  	$pPrice = $value["price"];
+  	$pImage = $value["images"][0]["src"];
+    $pSlug = $value["slug"];
+
+    // echo $value["id"] . ", " . $value["name"] . ", " . $value["slug"]. ", " . $value["price"]. ", " . $value["images"][0]["src"]."<br>";
+      
+    // echo "<div><a title=\"$pName\" href=\"includes/service-detail1.php\"> <img src=\"$pImage\"></a></div>";
+
+    echo "
+            <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\" id=\"$pId\">
+                <div class=\"my-list\">
+                    <img class=\"align-content-center\" src=\"$pImage\" style=\"width: 200px; height: 150px\"
+                         alt=\"dsadas\"/>
+                    <h3 class=\"text-center\">$pName</h3>
+                    <h6 class=\"text-cente\">$pSlug</h6>
+                    <div class=\"detail\">
+                        <p> </p>
+                        <img src=\"$pImage \" style=\"width: 200px; height: 150p\"
+                             alt=\"dsadas\"/>
+                        <a href=\"product-detail1.php?pName=$pName&pPrice=$pPrice&pImage=$pImage&pSlug=$pSlug\" class=\"btn btn-primary m-2\">View Detail</a>
+                    </div>
+                </div>
+            </div>
+    ";
+}
+echo "</div></div>";
+?>
+
+
+
+
+      
+
+
+<!--  <div class="container fullsize">
+         	<br>
+         	<br>
+            <h1 class="animated" align="center">Our Services</h1>
+			<div class="flex-container">
+			  <div><a title="Competition Analysis" href="includes/service-detail1.php">Competition Analysis</a></div>
+			  <div><a title="Business Plan" href="includes/service-detail2.php">Business Plan</a></div>
+			  <div><a  title="International Expansion Advice" href="includes/service-detail3.php">International Expansion Advice</a></div>  
+			  <div><a  title="Branding & Rebranding" href="includes/service-detail4.php">Branding &amp; Rebranding</a></div>  
+			  <div><a  title="International Expansion Advice" href="includes/service-detail5.php">Staff Training</a></div>
+			</div>
+            </div>
+            <div class="container fullsize">
+         	<br>
+         	<br>
 			
-				
-			}
-		
-		?>
-	
+			<div class="flex-container">
+			  <div><a title="Competition Analysis" href="includes/service-detail6.php">Strategic Plans</a></div>
+			  <div><a title="Business Plan" href="includes/service-detail7.php">Succession Plans</a></div>
+			  <div><a  title="International Expansion Advice" href="includes/service-detail8.php">Market Shifts</a></div>  
+			  <div><a  title="Branding & Rebranding" href="includes/service-detail9.php">Service Development</a></div>  
+			  <div><a  title="International Expansion Advice" href="includes/service-detail10.php">Pricing Analysis</a></div>
+			</div>
+            </div>
 
-        <div class="row" style="padding-top: 40px;">
-
-		<?php 
-		
-		if($prod) {
-		}
-		else {
-			echo "<div class='container'>";
-			echo "<div class='col-xs-8 alert alert-danger'>No Product Found</div></div>";
-		}
-		?>
-
-		</div>	
-    <!-- /.container -->
-
-    <!-- /.container -->
-		
-			
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+			<div class="flex-container">
+			   <div class="col-md-6 text-center mt-5">
+                <h5><a href="includes/lastVisitedServices.php" class="text-center"> 5 Last visited services</a></h5>
+            </div>
+            <div class="col-md-6 text-center mt-5">
+                <h5><a href="includes/mostVisitedServices.php">5 Most visited services</a></h5>
+            </div>
+            </div>
+ -->
+            
+              
+</section>

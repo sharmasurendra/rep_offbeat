@@ -1,0 +1,54 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flexItem {
+    flex: 1;
+}
+.flexStart {
+    justify-content: flex-start;
+}
+.flexEnd {
+    justify-content: flex-end;
+}
+.blueBackground {
+    background: lightskyblue;
+}
+.nav {
+    list-style: none;
+}
+.nav a {
+    text-decoration: none;
+    display: block;
+    padding: 0 1em;
+    color: white;
+}
+
+.flex-container > div {
+  background-color: #FFF056;
+  margin: 15px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+
+/*
+*/
+.flex-container-news {
+  display: flex;
+  justify-content: center;
+}
+
+
+.flex-container-news > div {
+  background-color: #F3FAB6;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}

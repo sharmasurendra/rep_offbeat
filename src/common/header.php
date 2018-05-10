@@ -19,7 +19,7 @@
                     </li>
                     <li>
                         <!-- <a href="../src/product.php">Product</a> -->
-                        <a href="../src/products.html" class="pure-menu-link">Products</a>
+                        <a href="../src/product.php" class="pure-menu-link">Products</a>
 
                     </li>
 					<li>
