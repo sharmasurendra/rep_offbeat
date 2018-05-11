@@ -477,10 +477,10 @@ $responseData = json_decode($response, TRUE);
                             <form method="post" class="well padding-bottom-10" onsubmit="return false;">
                                 <textarea rows="2" class="form-control" placeholder="Write a review"></textarea>
                                 <div style="margin-top: 10px">
-                                    <button type="submit" class="btn btn-sm btn-primary pull-right">
+<!--                                     <button type="submit" class="btn btn-sm btn-primary pull-right">
                                         Submit Review
                                     </button>
-                                    <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Location"><i class="fa fa-location-arrow"></i></a>
+ -->                                    <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Location"><i class="fa fa-location-arrow"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Voice"><i class="fa fa-microphone"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add Photo"><i class="fa fa-camera"></i></a>
                                     <a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="" data-original-title="Add File"><i class="fa fa-file"></i></a>
