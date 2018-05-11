@@ -17,7 +17,7 @@ $userVerified = 0;
 $postData = array(
     'action' => 'visitedProduct',
     'slugName' => $pSlugName,
-    'username' => 'guest-vik'
+    'username' => 'guest-surendra'
 );
 
 // Setup cURL
@@ -99,8 +99,10 @@ $reviewCount = count($reviewResponseData);
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <link href="/css/toolkit-minimal3.css" rel="stylesheet">
-    <link href="/css/application-minimal3.css" rel="stylesheet">
+
+   <link href="/resources/css/mp/toolkit-minimal3.css" rel="stylesheet">
+   <link href="/resources/css/mp/application-minimal3.css" rel="stylesheet">
+
 
     <style type="text/css">
 
@@ -581,10 +583,11 @@ echo
 
 
 
-<script src=\"../js/jquery.min.js\"></script>
-<script src=\"../js/toolkit3.js\"></script>
-<script src=\"../js/application3.js\"></script>
-<script type=\"../js/javascript\">
+<script src=\"../resources/js/jquery.min.js\"></script>
+<script src=\"../resources/js/toolkit3.js\"></script>
+<script src=\"../resources/js/application3.js\"></script>
+<script type=\"../resources/js/javascript\">
+
 
 
 </script>
