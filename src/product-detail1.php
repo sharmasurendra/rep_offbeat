@@ -56,9 +56,9 @@ $reviewPostData = array(
     'action' => 'getReview',
     'productId' => $pId
 );
-// echo 'Request ';
-// print_r ($reviewPostData);
-// echo '<br>';
+echo 'Request ';
+print_r ($reviewPostData);
+echo '<br>';
 
 
 
@@ -587,7 +587,6 @@ echo
 <script src=\"../resources/js/toolkit3.js\"></script>
 <script src=\"../resources/js/application3.js\"></script>
 <script type=\"../resources/js/javascript\">
-
 
 
 </script>

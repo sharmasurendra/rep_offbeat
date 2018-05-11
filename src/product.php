@@ -80,7 +80,7 @@ $responseData = json_decode($response, TRUE);
                         <p> </p>
                         <img src=\"$pImage \" style=\"width: 200px; height: 150p\"
                              alt=\"dsadas\"/>
-                        <a href=\"product-detail1.php?pName=$pName&pPrice=$pPrice&pImage=$pImage&pSlug=$pSlug\" class=\"btn btn-primary m-2\">View Detail</a>
+                        <a href=\"product-detail1.php?pId=$pId&pName=$pName&pPrice=$pPrice&pImage=$pImage&pSlug=$pSlug\" class=\"btn btn-primary m-2\">View Detail</a>
                     </div>
                 </div>
             </div>
