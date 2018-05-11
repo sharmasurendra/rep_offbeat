@@ -475,8 +475,8 @@ $responseData = json_decode($response, TRUE);
                         <div class="tab-pane fade" id="reviews">
                             <br>
                             <form method="post" class="well padding-bottom-10" onsubmit="return false;">
-                                <textarea rows="2" class="form-control" placeholder="Write a review"></textarea>
-                                <div style="margin-top: 10px">
+<!--                                 <textarea rows="2" class="form-control" placeholder="Write a review"></textarea>
+ -->                                <div style="margin-top: 10px">
 <!--                                     <button type="submit" class="btn btn-sm btn-primary pull-right">
                                         Submit Review
                                     </button>
