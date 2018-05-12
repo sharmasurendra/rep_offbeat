@@ -57,7 +57,7 @@ $reviewPostData = array(
     'productId' => $pId
 );
 echo 'Request ';
-print_r ($reviewPostData);
+// print_r ($reviewPostData);
 echo '<br>';
 
 
