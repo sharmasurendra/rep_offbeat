@@ -56,7 +56,7 @@ $reviewPostData = array(
     'action' => 'getReview',
     'productId' => $pId
 );
-echo 'Request ';
+// echo 'Request ';
 // print_r ($reviewPostData);
 echo '<br>';
 
