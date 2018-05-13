@@ -14,7 +14,7 @@ if( !$con ) // == null if creation of connection object failed
     // report the error to the user, then exit program
     // die("connection object not created: ".mysqli_error($con));
 } else{
-      $result = mysqli_query($con, "Select ProductId,ProductTag,ProductName,ProductPrice,ProductDesc from `product`");
+      $result = mysqli_query($con, "Select ProductId,ProductTag,ProductName,ProductPrice,ProductDesc from `product_mp`");
        while ($row = mysqli_fetch_row($result)) {
         array_push($cumurow, $row);
         // $users = $users.",".$row[0];
