@@ -17,35 +17,61 @@
 
 
 <?php
-// The data to send to the API
-$postData = array(
-    'action' => 'getProducts',
-);
 
-// Setup cURL
-$ch = curl_init('https://cmpe272.tanmay.one/api/v1/');
-curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+$myHost = "us-cdbr-iron-east-05.cleardb.net"; 
+$myUserName = "b1069ce4ee0339";  
+$myPassword = "7ee6e563";   
+$myDataBaseName = "heroku_5eaa584d7cda171"; 
 
 
-curl_setopt_array($ch, array(
-    CURLOPT_POST => TRUE,
-    CURLOPT_RETURNTRANSFER => TRUE,
-    CURLOPT_HTTPHEADER => array(
-        'auth-key: '.'434869e30ac42eb99ebdf5fe13e03a957057bc431302b5ba0b479abcb82e9eba',
-        'Content-Type: application/json'
-    ),
-    CURLOPT_POSTFIELDS => json_encode($postData)
-));
 
-// Send the request
-$response = curl_exec($ch);
-
-// Check for errors
-if($response === FALSE){
-  echo $response;
-    die(curl_error($ch));
+$con = mysqli_connect( "$myHost", "$myUserName", "$myPassword", "$myDataBaseName" );
+$cumurow = array();
+if( !$con ) // == null if creation of connection object failed
+{ 
+  // echo "111";
+    // report the error to the user, then exit program
+    // die("connection object not created: ".mysqli_error($con));
+} else{
+      $result = mysqli_query($con, "Select ProductId,ProductTag,ProductName,ProductPrice,ProductDesc from `product_mp`");
+       while ($row = mysqli_fetch_row($result)) {
+        array_push($cumurow, $row);
+        // $users = $users.",".$row[0];
+    }
+    // echo json_encode($cumurow);
+    
 }
+
+
+// // The data to send to the API
+// $postData = array(
+//     'action' => 'getProducts',
+// );
+
+// // Setup cURL
+// $ch = curl_init('https://cmpe272.tanmay.one/api/v1/');
+// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
+
+// curl_setopt_array($ch, array(
+//     CURLOPT_POST => TRUE,
+//     CURLOPT_RETURNTRANSFER => TRUE,
+//     CURLOPT_HTTPHEADER => array(
+//         'auth-key: '.'434869e30ac42eb99ebdf5fe13e03a957057bc431302b5ba0b479abcb82e9eba',
+//         'Content-Type: application/json'
+//     ),
+//     CURLOPT_POSTFIELDS => json_encode($postData)
+// ));
+
+// // Send the request
+// $response = curl_exec($ch);
+
+// // Check for errors
+// if($response === FALSE){
+//   echo $response;
+//     die(curl_error($ch));
+// }
 
 // Decode the response
 // echo  $response;
@@ -58,12 +84,16 @@ echo "<div class=\"block block-bordered-lg\">
 
 $responseData = json_decode($response, TRUE);
 
-  foreach ($responseData as $key => $value) {
-    $pId = $value["id"];
-  	$pName = $value["name"];
-  	$pPrice = $value["price"];
-  	$pImage = $value["images"][0]["src"];
-    $pSlug = $value["slug"];
+  foreach ($cumurow as $key => $value) {
+    $pId = $value["0"];
+    $pSlug = $value["1"];
+  	$pName = $value["2"];
+  	$pPrice = $value["3"];
+  	$pImage = $pId .'.jpg';
+    $imagePath='../resources/img/'.$pImage;
+
+    $pDesc = $value["5"];
+    
 
     // echo $value["id"] . ", " . $value["name"] . ", " . $value["slug"]. ", " . $value["price"]. ", " . $value["images"][0]["src"]."<br>";
       
@@ -72,15 +102,15 @@ $responseData = json_decode($response, TRUE);
     echo "
             <div class=\"col-lg-3 col-md-3 col-sm-6 col-xs-12\" id=\"$pId\">
                 <div class=\"my-list\">
-                    <img class=\"align-content-center\" src=\"$pImage\" style=\"width: 200px; height: 150px\"
+                    <img class=\"align-content-center\" src=\"$imagePath\" style=\"width: 200px; height: 150px\"
                          alt=\"dsadas\"/>
                     <h3 class=\"text-center\">$pName</h3>
                     <h6 class=\"text-cente\">$pSlug</h6>
                     <div class=\"detail\">
                         <p> </p>
-                        <img src=\"$pImage \" style=\"width: 200px; height: 150p\"
+                        <img src=\"$imagePath \" style=\"width: 200px; height: 150p\"
                              alt=\"dsadas\"/>
-                        <a href=\"product-detail1.php?pId=$pId&pName=$pName&pPrice=$pPrice&pImage=$pImage&pSlug=$pSlug\" class=\"btn btn-primary m-2\">View Detail</a>
+                        <a href=\"product-description.php?pId=$pId\" class=\"btn btn-primary m-2\">View Detail</a>
                     </div>
                 </div>
             </div>

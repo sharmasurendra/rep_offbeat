@@ -6,20 +6,26 @@
  $password = "7ee6e563";
  $dbname = "heroku_5eaa584d7cda171";
 
- $id = $_POST['action'];
+$pId = htmlspecialchars($_GET["pId"]);
+$id = $_POST['action'];
+ 
 
 
  try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $conn->prepare("SELECT * FROM products where 1 and product_id= :value" );
-    $stmt->bindParam(':value', $_POST['action']);
+    $stmt = $conn->prepare("SELECT * FROM product_mp where 1 and productId= :value" );
+    $stmt->bindParam(':value', $pId);
     $stmt->execute();
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $result = $stmt->fetch();
-    $value = $result['product_name'];
+    $value = $result['productName'];
 
-    $id = $result['product_id'];
+
+    $id = $result['productId'];
+    $pImage = $id .'.jpg';
+    $imagePath ='../resources/img/'.$pImage;
+
     if($id == 1 ){
         if(!isset($_COOKIE['visitedcountproduct1'])){
             $cookie = 1;
@@ -170,9 +176,9 @@ $conn = null;
 <body>
 
 <!-- <link rel="stylesheet" href="desc.css">
- -->    <h1>Details</h1> <h2><?php print($result['product_name']); ?></h2>
-    <h2><?php print($result['product_desc']); ?></h2>
-     <br><br><img src= <?php echo($result['product_image']); ?>>
+ -->    <h1>Details</h1> <h2><?php print($result['productName']); ?></h2>
+    <h2><?php print($result['ProductDesc']); ?></h2>
+     <br><br><img src= <?php echo($imagePath); ?>>
 
 </body>
 </html>
