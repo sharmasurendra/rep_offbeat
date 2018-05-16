@@ -1,10 +1,10 @@
 <?php
 try {
 
-$servername = "us-cdbr-iron-east-05.cleardb.net";
-$username = "b1069ce4ee0339";
-$password = "7ee6e563";
-$dbname = "heroku_5eaa584d7cda171";
+$myHost = "###"; 
+$myUserName = "###";  
+$myPassword = "###";   
+$myDataBaseName = "####"; 
 
 
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
